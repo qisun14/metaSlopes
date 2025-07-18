@@ -14,6 +14,9 @@ meta_slope_analysis <- function(cov_matrices, mean_vectors, sample_sizes) {
   extract_standardized_slope <- function(cov.mat, mean.vec, sample.nobs) {
     time.points <- length(mean.vec)
     var.names <- paste0("t", 1:time.points)
+    # Add names to covariance matrix and mean vector if missing
+    dimnames(cov.mat) <- list(var.names, var.names)
+    names(mean.vec) <- var.names
     int.loads <- paste0("1*", var.names, collapse = " + ")
     slp.loads <- paste0((0:(time.points - 1)), "*", var.names, collapse = " + ")
 
