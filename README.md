@@ -15,6 +15,11 @@ library(metaSlopes)
 
 ## 🚀 Usage Example
 
+> Note: `metaSlopes` supports studies with different numbers of time
+> points(\>=3).  
+> That is, the covariance matrices and mean vectors can vary in
+> dimension across studies.
+
 ``` r
 cov_matrices <- list(
   matrix(c(.143, .066, .062, .066, .094, .071, .062, .071, .082), nrow = 3, byrow = TRUE),
@@ -43,8 +48,8 @@ print(result)
 
 ## 🙋 Author
 
-Qi Sun Ph.D. Educational Psychology and Methodology University at
-Albany, SUNY [https://github.com/qisun14](https://github.com/qisun88)
+Qi Sun, Ph.D., Educational Psychology and Methodology, University at
+Albany, SUNY
 
 ## 📄 License
 
